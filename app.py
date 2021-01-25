@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request
 import datetime
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 import pyodbc
 import sqlparams
 
@@ -10,8 +10,7 @@ def create_app():
         app = Flask(__name__)
         app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
-        #load_dotenv()
-
+        
         connection = pyodbc.connect(
             "driver={ODBC Driver 17 for SQL Server};"
             "database=QuickAccess;"
